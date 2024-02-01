@@ -7,19 +7,22 @@ public class Main {
     {
         String PrimerNumero;
         String SegundoNumero;
-        int Num1;
-        int Num2;
-        int Suma;
+        String TercerNumero;
+        float Num1, Num2, Num3, Suma, Resta, Multiplicacion;
+        
+        PrimerNumero =JOptionPane.showInputDialog("Escribe el primer numero: ");
+        SegundoNumero = JOptionPane.showInputDialog("Escribe el segundo numero: ");
+        TercerNumero = JOptionPane.showInputDialog("Escribe el tercer numero: ");
 
-        PrimerNumero =JOptionPane.showInputDialog("Escribe el primer entero: ");
-        SegundoNumero = JOptionPane.showInputDialog("Escribe el segundo entero: ");
+        Num1 = Float.parseFloat(PrimerNumero);
+        Num2 = Float.parseFloat(SegundoNumero);
+        Num3 = Float.parseFloat(TercerNumero);
 
-        Num1 = Integer.parseInt(PrimerNumero);
-        Num2 = Integer.parseInt(SegundoNumero);
+        Suma = Num1 + Num2 + Num3;
+        Resta = Num1 - Num2 - Num3;
+        Multiplicacion = Num1 * Num2 * Num3;
 
-        Suma = Num1 + Num2;
-
-        JOptionPane.showMessageDialog(null, "la suma es "+ Suma, "resultados", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, String.format("La suma es: %.2f\nLa resta es: %.2f\nLa multiplicacion es: %.2f",Suma,Resta, Multiplicacion), "resultados", JOptionPane.PLAIN_MESSAGE);
         System.exit(0);
     }
 }
